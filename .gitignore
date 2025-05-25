@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+*.env
+
+# Terraform
+.terraform/
+terraform.tfstate
+terraform.tfstate.backup
+.crash/
+*.tfvars
+
+# Docker
+*.log
+*.pid
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDEs/editors
+.vscode/
+.idea/
+*.swp
+
+# Logs & temp
+*.log
+*.tmp
+*.bak
+
+# Project-specific
+*.iml
