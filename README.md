@@ -7,7 +7,7 @@
 
 ## 📝 Project Summary
 
-This is a simple weather forecasting web app built with Python (Flask). The app fetches real-time weather data from the **OpenWeatherMap public API** and displays it based on the user's input city. It's containerized with **Docker**, deployed on **AWS ECS Fargate**, and fronted by an **Application Load Balancer (ALB)** for public access. The infrastructure, including VPC, IAM, subnets, and ECS, is fully managed using **Terraform**, making this a hands-on example of serverless, cloud-native application deployment.
+This is a lightweight weather app built with Python (Flask) that displays the current weather for **London** using the **OpenWeatherMap public API**. It was created for personal use to quickly check the weather while planning a trip. The app is containerized using **Docker**, deployed serverlessly on **AWS ECS Fargate**, and accessed via an **Application Load Balancer (ALB)**. All infrastructure components—VPC, subnets, ECS, ALB, IAM—are provisioned using **Terraform**, demonstrating a real-world example of deploying a single-purpose app in a secure, scalable, cloud-native environment.
 
 ---
 
