@@ -5,8 +5,9 @@
 [![Container](https://img.shields.io/badge/Container-Docker-2496ED?logo=docker)](https://www.docker.com/)
 [![Backend](https://img.shields.io/badge/Backend-Flask-000000?logo=flask)](https://flask.palletsprojects.com/)
 
+## 📝 Project Summary
 
-A Python Flask weather app, containerized with Docker and deployed on AWS ECS using Terraform. This project showcases how to build and deploy a scalable, serverless cloud-native application with secure networking and automated infrastructure.
+This is a simple weather forecasting web app built with Python (Flask). The app fetches real-time weather data from the **OpenWeatherMap public API** and displays it based on the user's input city. It's containerized with **Docker**, deployed on **AWS ECS Fargate**, and fronted by an **Application Load Balancer (ALB)** for public access. The infrastructure, including VPC, IAM, subnets, and ECS, is fully managed using **Terraform**, making this a hands-on example of serverless, cloud-native application deployment.
 
 ---
 
@@ -16,12 +17,20 @@ A Python Flask weather app, containerized with Docker and deployed on AWS ECS us
 
 ---
 
+## 🗺️ Architecture Diagram
+
+![Architecture Diagram](screenshots/ecs%20dia.png)  
+_ECS deployment layout including VPC, subnets, ECS tasks, ALB, and supporting services._
+
+---
+
 ## 🔍 Overview
 - Flask backend fetching live weather data from OpenWeatherMap API
 - Dockerized and hosted on ECS with Fargate
 - Load-balanced via Application Load Balancer (ALB)
 - Secure VPC with public/private subnets and NAT
 - Provisioned entirely using Terraform
+- Validated with live DNS access, health checks, and deployment screenshots
 
 ---
 
@@ -31,6 +40,7 @@ A Python Flask weather app, containerized with Docker and deployed on AWS ECS us
 - **Containerization**: Docker
 - **Infrastructure**: ECS Fargate, ALB, VPC, IAM, Terraform
 - **API**: OpenWeatherMap
+- **Documentation**: Markdown + Screenshots + PDF write-up
 
 ---
 
@@ -75,7 +85,7 @@ _Secure VPC with public/private subnets and NAT Gateway._
 ## 📂 Project Structure
 
 ```
-ECS/
+weather-app/
 ├── app/
 │   ├── Dockerfile
 │   ├── requirements.txt
@@ -88,6 +98,7 @@ ECS/
 │   ├── providers.tf
 │   └── modules/
 ├── screenshots/
+│   ├── [Demo screenshots]
 ├── docs/
 │   └── Weather App Project Breakdown.pdf
 └── README.md
@@ -121,13 +132,15 @@ terraform apply
 - [x] Docker image pushed to ECR
 - [x] Logs available in CloudWatch
 - [x] Secure VPC and subnet architecture in place
+- [x] Full documentation PDF included
+- [x] Screenshots verifying build, infra, and test
 
 ---
 
 ## 📚 Full Breakdown
 
-The full write-up including errors, troubleshooting, and design decisions is available in:  
-📄 `docs/Weather App Project Breakdown.pdf`
+The full write-up including architecture diagram, build process, tests, errors resolved, and decisions made is available in:  
+📄 [`Weather App Project Breakdown.pdf`](docs/Weather%20App%20Project%20Breakdown.pdf)
 
 ---
 
@@ -137,6 +150,7 @@ The full write-up including errors, troubleshooting, and design decisions is ava
 - Implemented real-time API integration from OpenWeatherMap
 - Solidified Terraform skills for AWS infrastructure
 - Gained experience debugging container apps across local and cloud
+- Learned to isolate and remove `.terraform` bloat from Git version control
 
 ---
 
